@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}timeline{% endblock %}
+{% block description %}My personal timeline{% endblock %}
+
+{% block content %}
+<ul class="list-group timeline">
+  <li class="list-group-item" ng-repeat="tweet in list_tweet">
+    <p>
+      <b>[[ tweet.username ]]</b>[[ tweet.text ]]
+      <button type="button" class="btn btn-default btn-xs">
+        <span class="glyphicon glyphicon-remove" 
+        ng-click="removeTweet($index)"></span>
+      </button>
+    </p>
+  </li>
+</ul>
+<form role="form">
+  <div class="input-group input-group-lg">
+    <span class="input-group-addon">@</span>
+    <input type="text" ng-model="tweet_username"
+    class="form-control" placeholder="Username">
+  </div>
+  <br />
+  <div class="input-group">
+    <span class="input-group-addon">Text</span>
+    <textarea ng-model="tweet_text" class="form-control" rows="3"></textarea>
+  </div>
+  <br />
+  <button type="button" class="btn btn-info btn-lg btn-block" 
+  ng-click="writeTweet()">Tweet</button>
+</form>
+{% endblock %}

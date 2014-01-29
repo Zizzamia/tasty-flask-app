@@ -1,0 +1,8 @@
+# Compiled files
+*.pyc
+
+# Fabfile
+fabfile.py
+
+# OSX sucks
+.DS_Store

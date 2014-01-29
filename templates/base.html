@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  
+  <title>My app - {% block title %}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{% endblock %}">
+
+  <link rel="stylesheet" href="/static/css/bootstrap.css">
+  <link rel="stylesheet" href="/static/css/app.css">
+
+  <link rel="shortcut icon" href="/static/layout/favicon-twitter.png">
+</head>
+<body ng-controller="AppCtrl">
+
+
+  <header>
+    <img src="/static/layout/twitter_logo_blue.png" height="50" />
+    <h1>{{ title }}</h1>
+  </header>
+
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer>
+    <p>A nice tasty of a complete web app made in 
+      <a href="http://flask.pocoo.org/" target="_blank">Flask</a>, 
+      <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and 
+      <a href="http://angularjs.org/" target="_blank">AngularJS</a> by 
+      <a href="https://twitter.com/" target="_blank">@zizzamia</a>
+    </p>
+  </footer>
+
+  <script src="/static/js/angular.min.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* =============================================================================
+Main layout style
+============================================================================= */
+html {
+  position: relative;
+}
+
+body {
+  background-color: white;
+  color: #5d6565;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.content {
+  margin: 20px auto 0;
+  padding: 15px 0;
+  width: 600px;
+  text-align: center;
+}
+
+/* =============================================================================
+Typography style
+============================================================================= */
+p {
+  margin: 0 0 9px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* =============================================================================
+Header style
+============================================================================= */
+header {
+  width: 600px;
+  margin: 20px auto 20px;
+  text-align: center;
+}
+header img {
+  float: left;
+}
+
+/* =============================================================================
+Footer style
+============================================================================= */
+footer {
+  border-top: 4px double #DEDEDE;
+  margin: 20px auto 0;
+  padding: 20px;
+  text-align: center;
+  width: 600px;
+}
+
+/* =============================================================================
+Home style
+============================================================================= */
+.home h1 {
+  color: #7E96A2;
+}
+.timeline li p {
+  font-size: 16px;
+  text-align: left;
+}
+.timeline li b {
+  margin-right: 20px;
+}
+.timeline button {
+  float: right;
+}
