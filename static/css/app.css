@@ -15,7 +15,7 @@ body {
 
 .content {
   margin: 20px auto 0;
-  padding: 15px 0;
+  padding: 15px 0 0 0;
   width: 600px;
   text-align: center;
 }
@@ -46,10 +46,14 @@ Footer style
 ============================================================================= */
 footer {
   border-top: 4px double #DEDEDE;
-  margin: 20px auto 0;
+  margin: 0 auto;
   padding: 20px;
   text-align: center;
   width: 600px;
+}
+footer p {
+  font-size: 15px;
+  line-height: 22px;
 }
 
 /* =============================================================================
@@ -67,4 +71,12 @@ Home style
 }
 .timeline button {
   float: right;
+}
+.time h4 {
+  display: inline-block;
+  width: 49%;
+  margin: 20px 0;
+}
+.blue {
+  color: orange;
 }

@@ -1,8 +1,10 @@
 # Compiled files
 *.pyc
 
-# Fabfile
+# Deploy python files
 fabfile.py
+server_production.py
+config_production.py
 
 # OSX sucks
 .DS_Store

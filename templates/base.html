@@ -7,17 +7,19 @@
   <title>My app - {% block title %}{% endblock %}</title>
   <meta name="description" content="{% block description %}{% endblock %}">
 
-  <link rel="stylesheet" href="/static/css/bootstrap.css">
-  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="stylesheet" href="{{ path }}/static/css/bootstrap.css">
+  <link rel="stylesheet" href="{{ path }}/static/css/app.css?v1">
 
-  <link rel="shortcut icon" href="/static/layout/favicon-twitter.png">
+  <link rel="shortcut icon" href="{{ path }}/static/layout/favicon-twitter.png">
 </head>
 <body ng-controller="AppCtrl">
 
 
   <header>
-    <img src="/static/layout/twitter_logo_blue.png" height="50" />
-    <h1>{{ title }}</h1>
+    <a href="{{ path }}">
+      <img src="{{ path }}/static/layout/twitter_logo_blue.png" height="50" />
+    </a>
+    <h1>{% block header_title %}{{ title }}{% endblock %}</h1>
   </header>
 
   <div class="content">
@@ -25,7 +27,8 @@
   </div>
 
   <footer>
-    <p>A nice tasty of a complete web app made in 
+    <p>
+      A tasty beginning Web Dev with 
       <a href="http://flask.pocoo.org/" target="_blank">Flask</a>, 
       <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> and 
       <a href="http://angularjs.org/" target="_blank">AngularJS</a> by 
@@ -33,7 +36,10 @@
     </p>
   </footer>
 
-  <script src="/static/js/angular.min.js"></script>
-  <script src="/static/js/app.js"></script>
+  <script>
+  var path = '{{ path }}';
+  </script>
+  <script src="{{ path }}/static/js/angular.min.js"></script>
+  <script src="{{ path }}/static/js/app.js?v1"></script>
 </body>
 </html>

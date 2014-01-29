@@ -1,6 +1,9 @@
 # Debug True/False
 DEBUG = True
 
+# Path
+PATH = "http://0.0.0.0:5000"
+
 # Port
 PORT = 5000
 
